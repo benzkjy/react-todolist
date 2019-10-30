@@ -1,0 +1,9 @@
+.todolist {
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-dark {
+  margin-left: 10px;
+}
