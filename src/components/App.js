@@ -33,6 +33,14 @@ class App extends Component {
       });
     }
   };
+  deleteItem = key => {
+    const filteredItems = this.state.items.filter(item => {
+      return item.key !== key;
+    });
+    this.setState({
+      items: filteredItems
+    });
+  };
 
   render() {
     return (
@@ -45,7 +53,7 @@ class App extends Component {
           currentItem={this.state.currentItem}
         />
 
-        <TodoItem entries={this.state.items} />
+        <TodoItem entries={this.state.items} deleteItem={this.deleteItem} />
       </div>
     );
   }
